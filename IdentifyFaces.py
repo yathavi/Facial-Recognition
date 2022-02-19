@@ -5,13 +5,13 @@ import face_recognition
 from PIL import Image, ImageDraw 
 
 # Get encodings of known images
-firstKnownImage = face_recognition.load_image_file('./Images/Known/russell-westbrook.jpg')
+firstKnownImage = face_recognition.load_image_file('./russell-westbrook.jpg')
 firstImageEncoding = face_recognition.face_encodings(firstKnownImage)[0]
 
-secondKnownImage = face_recognition.load_image_file('./Images/Known/kevin-durant.jpg')
+secondKnownImage = face_recognition.load_image_file('./kevin-durant.jpg')
 secondImageEncoding = face_recognition.face_encodings(secondKnownImage)[0]
 
-thirdKnownImage = face_recognition.load_image_file('./Images/Known/james-harden.jpg')
+thirdKnownImage = face_recognition.load_image_file('./james-harden.jpg')
 thirdImageEncoding = face_recognition.face_encodings(thirdKnownImage)[0]
 
 #  Collect all known encodings into an array
@@ -21,7 +21,7 @@ knownImageEncodings = [firstImageEncoding, secondImageEncoding, thirdImageEncodi
 knownImageNames = ["Russell Westbrook", "Kevin Durant", "James Harden"]
 
 # Load unlabeled image to identify faces
-unlabeledImage = face_recognition.load_image_file('./Images/si-rw-jh-kd.jpg') 
+unlabeledImage = face_recognition.load_image_file('./si-rw-jh-kd.jpg') 
 
 # Find all faces in unlabeled image
 faceCoordinates = face_recognition.face_locations(unlabeledImage)
